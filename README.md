@@ -1,22 +1,30 @@
-how to create a flask application 
-1. Set up a virtual environment
-2. Install Flask
+# create a flask application 
+## Set up a virtual environment
+1. Install Flask
+```sh
 pip install Flask
+```
 
-3. Create a Flask app
-4. Run the Flask app
+# Create a Flask app
+## Run the Flask app
+```sh
 python app.py
+```
 
-create a docker file for this
-4. Build and Run the Docker Container
-4.1. Build the Docker Image
+# create a docker file
+## Build the Docker Image
+```sh
 docker build -t sample-app .
+```
 
-4.2. Run the Docker Container
+## Run the Docker Container
+```sh
 docker run -p 5000:5000 sample-app
+```
 
-create kubernetes deployment, HPA, service account, service and config map yamals
+# create kubernetes deployment, HPA, service account, service and config map yamals
 
+```sh
 brew install minikube
 minikube start
 minikube image load sample-app
@@ -33,3 +41,4 @@ kubectl get namespaces
 kubectl get pods -n default
 kubectl -n default exec -it sample-app-deployment-669bd8cc6d-62dk2 -- /bin/sh
 kubectl logs sample-app-deployment-669bd8cc6d-62dk2 -n default
+```
